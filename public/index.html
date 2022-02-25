@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,22 +14,17 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    
+
     <!-- Font-awesome 설정 코드 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
     <!-- Google web font 설정 코드 -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css">
-
+    <script defer src="script.js"></script>
 </head>
+
 <body>
     <!-- semantic tag, 의미상 구분용도 div와 같은 역할 -->
     <article>
@@ -68,14 +64,14 @@
                     </div>
                 </div>
             </div>
+            <hr>
         </header>
-
         <section>
             <div class="Card">
                 <div class="Card__header">
                     <select class="form-select"
-                     style="width: auto"
-                     aria-label="Default select example" name="" id="">
+                    style="width: auto"
+                    aria-label="Default select example" name="" id="">
                         <option selected>자동 언어감지</option>
                         <option value="ko">한국어</option>
                         <option value="en">English</option>
@@ -83,17 +79,17 @@
                     </select>
                 </div>
                 <div class="Card__body">
+                    <div style="border-bottom: 2px dashed #21dc6d;"></div>
                     <div class="Card__body__textarea">
-                        <div style="border-bottom: 2px dashed green;"></div>
-                        <textarea class="Card__body__content" placeholder="번역할 텍스트를 입력하세요." autofocus></textarea>
+                        <textarea class="Card__body__content" placeholder="번역할 텍스트를 입력하세요" autofocus></textarea>
                     </div>
                 </div>
             </div>
             <div class="Card">
                 <div class="Card__header">
                     <select class="form-select"
-                     style="width: auto"
-                     aria-label="Default select example" name="" id="">
+                    style="width: auto"
+                    aria-label="Default select example" name="" id="">
                         <option selected>언어 선택</option>
                         <option value="ko">한국어</option>
                         <option value="en" selected>English</option>
@@ -101,9 +97,9 @@
                     </select>
                 </div>
                 <div class="Card__body">
-                    <div style="border-bottom: 0.5px solid grey;"></div>
+                    <div style="border-bottom: 0.5px solid #ADB5BD;"></div>
                     <div class="Card__body__textarea">
-                        <textarea class="Card__body__content" placeholder="번역된 텍스트가 입력될 것입니다." autofocus></textarea>
+                        <textarea class="Card__body__content"></textarea>
                     </div>
                 </div>
             </div>
@@ -113,17 +109,20 @@
             <div class="Footer">
                 <p class="Footer__corp">&copy; 2022 Company, Inc</p>
 
-
+                <!-- ul.footer__sns>li*3>i -->
                 <ul class="Footer__sns">
-                    <li><i></i></li>
-                    <li><i></i></li>
-                    <li><i></i></li>
+                    <li><i class="fab fa-facebook fa-lg"></i></li>
+                    <li><i class="fab fa-instagram fa-lg"></i></li>
+                    <li><i class="fab fa-discord fa-lg"></i></li>
                 </ul>
 
-                <!-- footer__menu 라는 class명으로 Home, Feature, Pricing, FAQs, About으로 구성된 li태그 <a>가 중첩되도록 -->
+                <!-- footer__menu라는 class명으로 Home, Features, Pricing, FAQs, About으로
+                구성된 li태그 <a>가 중첩되어 있도록. -->
+
+                <!-- ul.Footer__menu>li*5>a -->
                 <ul class="Footer__menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">Features</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">About</a></li>
@@ -131,6 +130,6 @@
             </div>
         </footer>
     </article>
-
 </body>
+
 </html>

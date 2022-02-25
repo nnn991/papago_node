@@ -1,4 +1,18 @@
+
 /* reset.css */
+textarea::-webkit-placeholder {
+  font-size: 70%;
+}
+textarea::-moz-placeholder {
+  font-size: 70%;
+}
+textarea::-ms-placeholder {
+  font-size: 70%;
+}
+textarea::placeholder {
+  font-size: 70%;
+}
+
 
 html, body {
     box-sizing: border-box;
@@ -7,7 +21,7 @@ html, body {
 }
 
 ul {
-    list-style: none; /*리스트 점 없애기*/
+    list-style: none;
     margin: 0;
 }
 
@@ -16,23 +30,28 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-    text-decoration: none; /* 밑줄 없애기 */
-    color: black;
+    text-decoration: none;
+    color: #212529;
 }
 
-/* textarea, hr {} */
 textarea {
-    border: none;
-    resize: none;   
+  border: none;
+  resize: none;
 }
 
-/* general */
+hr {
+  margin-top: 0;
+}
+
+/* General */
+
 i {
-    color: grey;
+    color: #6c757d;
 }
 
 body {
     height: 100vh;
+    /* position: relative; */
 }
 
 article {
@@ -53,15 +72,16 @@ section {
     justify-content: center;
 }
 
-header, 
-section {
+header,
+section,
+footer {
     flex-shrink: 0;
 }
 
+/* hr {} */
 
-/* header */
+/* Header */
 .Header {
-    /* border: 2px dashed slateblue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +92,6 @@ section {
 .Header__main {
     display: flex;
     align-items: center;
-    /* border: 1px dashed black; */
 }
 
 .Header__main__menu {
@@ -85,17 +104,14 @@ section {
     font-size: 1rem;
 }
 
-
-
 .Header__sub {
     display: flex;
 }
 
 .Header__sub__icons {
     display: flex;
-    /* border: 2px dashed black; */
-    margin-right: 10px;
     align-items: center;
+    margin-right: 10px;
 }
 
 .Header__sub__icon {
@@ -106,7 +122,6 @@ section {
     display: flex;
     align-items: center;
     margin-left: 14px;
-    /* border: 2px dashed black; */
 }
 
 .Header__sub__profile__username {
@@ -214,73 +229,75 @@ section {
   }
 }
 
-
 /* Card */
 .Card {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    align-items: center;
-    height: 40vh;
-    margin: 0 20px;
-    
-    border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  align-items: center;
+  height: 40vh;
+  margin: 0 20px;
+  border: 1px solid #ADB5BD;
 }
 
 .Card:first-child {
-    border: 2px solid green;
+  border: 2px dashed #21dc6d;
 }
 
 .Card__header {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .Card__body {
-    /* border: 1px solid skyblue; */
-    height: 50%;
-    width: 100%;
-    margin-top: 20px;
-    flex: 1 1 auto;
+  width: 100%;
+  height: 50%;
+  margin-top: 20px;
+  flex: 1 1 auto;
 }
 
 .Card__body__textarea {
-    /* border: 3px dashed pink; */
-    width: 100%;
-    height: 100%;
-    font-size: 1.3rem;
-    padding: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 .Card__body__content {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    height: 100%;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .Card__body__content:focus {
-    outline: 0.5px white;
-} 
+  outline: 0.5px #f8f9fa;
+}
 
-/* footer */
+/* Footer */
 .Footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
 }
 
 .Footer__sns {
-    display: flex;
+  display: flex;
 }
 
 .Footer__sns li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .Footer__menu {
-    display: flex;
+  display: flex;
 }
 
 .Footer__menu li {
-    margin: 0 10px;
+  margin: 0 10px;
+}
+
+/* Bootstrap */
+.form-select:focus {
+  border-color: #21dc6d;
+  box-shadow: 0 0 0 0.25rem rgb(33 220 109 / 25%);
 }
